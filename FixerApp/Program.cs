@@ -23,6 +23,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection"),
         new MySqlServerVersion(new Version(8, 0, 36))
     ));
+builder.Services.AddHttpClient();
 
 builder.Services.AddScoped<IDisputeService, DisputeService>();
 builder.Services.AddScoped<IDisputeRepository, DisputeRepository>();
